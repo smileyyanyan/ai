@@ -1,4 +1,4 @@
-package com.sanutty.openai.app.services;
+package com.sanutty.ai.app;
 
 
 import org.springframework.stereotype.Service;
@@ -11,13 +11,15 @@ public class ChatService {
   
     private Client client = new Client();
   
-    public String chat(String question) {
+    public AskQuestion chat(AskQuestion question) {
       
       GenerateContentResponse response = client.models.generateContent(
                                                       "gemini-2.5-flash",
-                                                      question,
+                                                      question.getQuestion(),
                                                       null);
-      return response.text();
+      question.setAnswer( response.text() );
+      
+      return question;
     }
     
 }

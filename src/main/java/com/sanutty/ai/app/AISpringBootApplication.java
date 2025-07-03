@@ -1,4 +1,4 @@
-package com.sanutty.openai.app;
+package com.sanutty.ai.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
