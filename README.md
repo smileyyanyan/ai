@@ -1,0 +1,24 @@
+# Tiny AI Chat Service
+ 
+This is a Spring Boot application with a simple text box to ask AI a question. The current design uses the goole chat client to the free tier API key. The chat service is configurable and the google chat can be easily replaced with another chat model by simply changing it in application.properties and adding a new service implementation. A simple ConcurrentMapCacheManager cache is used for commonly asked questions. 
+
+
+### Software Design  
+
+The software architecture diagram is listed below. The google services uses a callable task to answer the question. 
+
+![Alt text](Design.jpg?raw=true "Architectural Design")
+
+
+### Docker  
+
+The dockerfile exposes port 9888.
+
+  * docker build -t spring/chat-service-spring-boot-docker .
+  * docker run -p 9888:8080 spring/chat-service-spring-boot-docker
+
+
+
+ 
+
+
