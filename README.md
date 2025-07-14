@@ -12,7 +12,7 @@ The software architecture diagram is listed below. The google chat service uses 
 
 ### Running the application 
 
-Just run AISpringBootApplication as a Java application with a GOOGLE_API_KEY environment variable where the value is the free tier API key. 
+Just run AISpringBootApplication as a Java application with a GOOGLE_API_KEY environment variable where the value is the free tier API key. Alternatively, build and run with docker with the docker instructions below. 
 
 ### Docker  
 
