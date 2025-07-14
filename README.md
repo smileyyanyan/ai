@@ -5,7 +5,7 @@ This is a Spring Boot application with a simple text box to ask AI a question. T
 
 ### Software Design  
 
-The software architecture diagram is listed below. The google services uses a callable task to answer the question. 
+The software architecture diagram is listed below. The google chat service uses a callable task to answer the question. Currently it only answers one question. It is easy to add new methods to answer multiple questions. 
 
 ![Alt text](Design.jpg?raw=true "Architectural Design")
 
