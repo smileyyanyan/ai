@@ -10,6 +10,10 @@ The software architecture diagram is listed below. The google chat service uses 
 ![Alt text](Design.jpg?raw=true "Architectural Design")
 
 
+### Running the application 
+
+Just run AISpringBootApplication as a Java application with a GOOGLE_API_KEY environment variable where the value is the free tier API key. 
+
 ### Docker  
 
 The dockerfile exposes port 9888.
