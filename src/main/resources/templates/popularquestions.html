@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Popular AI Questions</title>
+    
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%; /* Optional: Make the table take up the full width */
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px; /* Optional: Adds spacing between cell content and border */
+      text-align: left; /* Optional: Aligns cell content to the left */
+    }
+  </style>
+        
+</head>
+<body>
+
+    <h1>Popular Questions and Count:</h1>
+    
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>Number of times asked</th>
+      </tr>
+      
+      <tr th:each="entry : ${popularQuestionsMap}">
+          <td th:text="${entry.key}"></td>
+          <td th:text="${entry.value}"></td>  
+      </tr>
+      
+    </table>
+    
+    
+
+    
+
+</body>
+</html>

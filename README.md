@@ -1,6 +1,6 @@
 # Tiny AI Chat Service
  
-This is a Spring Boot application with a simple text box to ask AI a question. The current design uses the goole chat client to the free tier API key. The chat service is configurable and the google chat can be easily replaced with another chat model by simply changing it in application.properties and adding a new service implementation. A simple ConcurrentMapCacheManager cache is used for commonly asked questions. 
+This is a Spring Boot application with a simple text box to ask AI a question. The current design uses the google chat client to the free tier API key. The chat service is configurable and the google chat can be easily replaced with another chat model by simply changing it in application.properties and adding a new service implementation. A simple ConcurrentMapCacheManager cache is used for commonly asked questions. H2 in-memory database is used to keep track of the number of times that a question has been answered. Questions that have been asked 2 or more times can be retrieved and displayed. 
 
 
 ### Software Design  
@@ -9,6 +9,13 @@ The software architecture diagram is listed below. The google chat service uses 
 
 ![Alt text](Design.jpg?raw=true "Architectural Design")
 
+### Question Page
+
+![Alt text](askQuestion.jpg?raw=true "Ask a question")
+  
+### Popular Questions Page
+
+![Alt text](popularQuestionsCount.jpg?raw=true "Popular questions count ")
 
 ### Running the application 
 
